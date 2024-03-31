@@ -51,3 +51,8 @@ export type IndexedEvent = {
 	index: number,
 	event: object,
 }
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function isIndexedEvent(testObj: any) {
+	return (testObj.index !== undefined) && (testObj.event !== undefined)
+}
