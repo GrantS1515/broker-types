@@ -2,9 +2,12 @@
   "name": "broker-types",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/broker-types.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tscomp": "npx tsc-watch"
+  },
+  "devDependencies": {
+    "tsc-watch": "^6.0.4"
   },
   "author": "",
   "license": "ISC"
