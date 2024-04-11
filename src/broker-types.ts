@@ -56,3 +56,7 @@ export type IndexedEvent = {
 export function isIndexedEvent(testObj: any) {
 	return (testObj.index !== undefined) && (testObj.event !== undefined)
 }
+
+export function newIndexedEvent(index: number, event: object): IndexedEvent {
+	return { index: index, event: event }
+}

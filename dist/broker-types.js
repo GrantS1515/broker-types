@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isIndexedEvent = exports.newMultipleEventRequest = exports.newMultipleEventsResponse = exports.isMultipleEventsResponse = exports.isMultipleEventsRequest = exports.isSingleEvent = exports.newSingleEvent = exports.BrokerEventClass = void 0;
+exports.newIndexedEvent = exports.isIndexedEvent = exports.newMultipleEventRequest = exports.newMultipleEventsResponse = exports.isMultipleEventsResponse = exports.isMultipleEventsRequest = exports.isSingleEvent = exports.newSingleEvent = exports.BrokerEventClass = void 0;
 var BrokerEventClass;
 (function (BrokerEventClass) {
     BrokerEventClass["single"] = "broker__event__single";
@@ -41,3 +41,7 @@ function isIndexedEvent(testObj) {
     return (testObj.index !== undefined) && (testObj.event !== undefined);
 }
 exports.isIndexedEvent = isIndexedEvent;
+function newIndexedEvent(index, event) {
+    return { index: index, event: event };
+}
+exports.newIndexedEvent = newIndexedEvent;

@@ -25,3 +25,4 @@ export type IndexedEvent = {
     event: object;
 };
 export declare function isIndexedEvent(testObj: any): boolean;
+export declare function newIndexedEvent(index: number, event: object): IndexedEvent;
