@@ -1,3 +1,7 @@
+
+
+
+
 export enum BrokerEventClass {
 	single = "broker__event__single",
 	getMultipleRequest = "broker__event__getMultipleRequest",
@@ -49,7 +53,7 @@ export function newMultipleEventRequest(): MultipleEventsRequest {
 
 export type IndexedEvent = {
 	index: number,
-	event: object,
+	event: SingleEvent,
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -57,6 +61,6 @@ export function isIndexedEvent(testObj: any) {
 	return (testObj.index !== undefined) && (testObj.event !== undefined)
 }
 
-export function newIndexedEvent(index: number, event: object): IndexedEvent {
+export function newIndexedEvent(index: number, event: SingleEvent): IndexedEvent {
 	return { index: index, event: event }
 }

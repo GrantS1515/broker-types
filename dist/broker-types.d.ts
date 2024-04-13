@@ -22,7 +22,7 @@ export declare function newMultipleEventsResponse(events: IndexedEvent[]): Multi
 export declare function newMultipleEventRequest(): MultipleEventsRequest;
 export type IndexedEvent = {
     index: number;
-    event: object;
+    event: SingleEvent;
 };
 export declare function isIndexedEvent(testObj: any): boolean;
-export declare function newIndexedEvent(index: number, event: object): IndexedEvent;
+export declare function newIndexedEvent(index: number, event: SingleEvent): IndexedEvent;
